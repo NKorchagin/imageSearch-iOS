@@ -14,6 +14,7 @@
 		C71A96F7229DC87000F85DB3 /* ImageSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A96F6229DC87000F85DB3 /* ImageSearchUITests.swift */; };
 		C71A970A229DCCCA00F85DB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9709229DCCCA00F85DB3 /* MainViewController.swift */; };
 		C71A970D229DD09400F85DB3 /* RemoteImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A970C229DD09300F85DB3 /* RemoteImageModel.swift */; };
+		C71A9710229DD22B00F85DB3 /* MainViewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A970F229DD22B00F85DB3 /* MainViewImageCell.swift */; };
 		C71A9715229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9714229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		C71A96F8229DC87000F85DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C71A9709229DCCCA00F85DB3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C71A970C229DD09300F85DB3 /* RemoteImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageModel.swift; sourceTree = "<group>"; };
+		C71A970F229DD22B00F85DB3 /* MainViewImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewImageCell.swift; sourceTree = "<group>"; };
 		C71A9714229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DequeueAndRegister.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 		C71A9707229DCC5700F85DB3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C71A970E229DD21600F85DB3 /* -Views */,
 				C71A9709229DCCCA00F85DB3 /* MainViewController.swift */,
 			);
 			path = Main;
@@ -166,6 +169,14 @@
 				C71A970C229DD09300F85DB3 /* RemoteImageModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C71A970E229DD21600F85DB3 /* -Views */ = {
+			isa = PBXGroup;
+			children = (
+				C71A970F229DD22B00F85DB3 /* MainViewImageCell.swift */,
+			);
+			path = "-Views";
 			sourceTree = "<group>";
 		};
 		C71A9713229DD55B00F85DB3 /* Extensions */ = {
@@ -307,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C71A96D7229DC86B00F85DB3 /* AppDelegate.swift in Sources */,
+				C71A9710229DD22B00F85DB3 /* MainViewImageCell.swift in Sources */,
 				C71A9715229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift in Sources */,
 				C71A970D229DD09400F85DB3 /* RemoteImageModel.swift in Sources */,
 				C71A970A229DCCCA00F85DB3 /* MainViewController.swift in Sources */,
