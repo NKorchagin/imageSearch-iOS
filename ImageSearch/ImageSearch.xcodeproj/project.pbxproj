@@ -14,6 +14,7 @@
 		C71A96F7229DC87000F85DB3 /* ImageSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A96F6229DC87000F85DB3 /* ImageSearchUITests.swift */; };
 		C71A970A229DCCCA00F85DB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9709229DCCCA00F85DB3 /* MainViewController.swift */; };
 		C71A970D229DD09400F85DB3 /* RemoteImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A970C229DD09300F85DB3 /* RemoteImageModel.swift */; };
+		C71A9715229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9714229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C71A96F8229DC87000F85DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C71A9709229DCCCA00F85DB3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C71A970C229DD09300F85DB3 /* RemoteImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageModel.swift; sourceTree = "<group>"; };
+		C71A9714229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DequeueAndRegister.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				C71A9705229DCAE400F85DB3 /* Assets */,
+				C71A9713229DD55B00F85DB3 /* Extensions */,
 				C71A970B229DD07300F85DB3 /* Models */,
 				C71A9706229DCC4C00F85DB3 /* Scenes */,
 				C71A9704229DCA8500F85DB3 /* SupportingFiles */,
@@ -163,6 +166,14 @@
 				C71A970C229DD09300F85DB3 /* RemoteImageModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C71A9713229DD55B00F85DB3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C71A9714229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C71A96D7229DC86B00F85DB3 /* AppDelegate.swift in Sources */,
+				C71A9715229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift in Sources */,
 				C71A970D229DD09400F85DB3 /* RemoteImageModel.swift in Sources */,
 				C71A970A229DCCCA00F85DB3 /* MainViewController.swift in Sources */,
 			);
