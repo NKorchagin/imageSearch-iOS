@@ -12,6 +12,7 @@
 		C71A96E1229DC87000F85DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71A96DF229DC87000F85DB3 /* LaunchScreen.storyboard */; };
 		C71A96EC229DC87000F85DB3 /* ImageSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A96EB229DC87000F85DB3 /* ImageSearchTests.swift */; };
 		C71A96F7229DC87000F85DB3 /* ImageSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A96F6229DC87000F85DB3 /* ImageSearchUITests.swift */; };
+		C71A970A229DCCCA00F85DB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9709229DCCCA00F85DB3 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		C71A96F2229DC87000F85DB3 /* ImageSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71A96F6229DC87000F85DB3 /* ImageSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchUITests.swift; sourceTree = "<group>"; };
 		C71A96F8229DC87000F85DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C71A9709229DCCCA00F85DB3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				C71A9705229DCAE400F85DB3 /* Assets */,
+				C71A9706229DCC4C00F85DB3 /* Scenes */,
 				C71A9704229DCA8500F85DB3 /* SupportingFiles */,
 			);
 			path = ImageSearch;
@@ -133,6 +136,22 @@
 				C71A96DD229DC87000F85DB3 /* Images.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		C71A9706229DCC4C00F85DB3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C71A9707229DCC5700F85DB3 /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C71A9707229DCC5700F85DB3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C71A9709229DCCCA00F85DB3 /* MainViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C71A96D7229DC86B00F85DB3 /* AppDelegate.swift in Sources */,
+				C71A970A229DCCCA00F85DB3 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,6 +21,12 @@ extension AppDelegate: UIApplicationDelegate {
         self.window = window
         window.makeKeyAndVisible()
 
+        let mainViewContoller = MainViewContoller()
+        let mainNavigationController = UINavigationController(rootViewController: mainViewContoller)
+        window.rootViewController = mainNavigationController
+
+
+
         return true
     }
 
