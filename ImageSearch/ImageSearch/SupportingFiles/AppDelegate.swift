@@ -23,6 +23,7 @@ extension AppDelegate: UIApplicationDelegate {
 
         let mainViewContoller = MainViewContoller()
         let mainNavigationController = UINavigationController(rootViewController: mainViewContoller)
+        mainNavigationController.navigationBar.prefersLargeTitles = true
         window.rootViewController = mainNavigationController
 
 
