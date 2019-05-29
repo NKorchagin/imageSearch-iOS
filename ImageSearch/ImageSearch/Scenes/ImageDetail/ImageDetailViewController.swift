@@ -41,6 +41,7 @@ private extension ImageDetailViewController {
         tableView.register(cellClass: ImageDetailAuthor.self)
 
         tableView.tableFooterView = UIView()
+        tableView.separatorStyle = .none
     }
 
 }

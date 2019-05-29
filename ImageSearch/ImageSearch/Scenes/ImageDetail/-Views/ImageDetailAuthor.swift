@@ -22,28 +22,28 @@ class ImageDetailAuthor: UITableViewCell {
                                          toItem: self,
                                          attribute: .leadingMargin,
                                          multiplier: 1,
-                                         constant: 0)
+                                         constant: 16)
         let trailing = NSLayoutConstraint(item: self,
                                           attribute: .trailingMargin,
                                           relatedBy: .equal,
                                           toItem: authorLabel,
                                           attribute: .trailingMargin,
                                           multiplier: 1,
-                                          constant: 0)
+                                          constant: 16)
         let top = NSLayoutConstraint(item: authorLabel,
                                      attribute: .topMargin,
                                      relatedBy: .equal,
                                      toItem: self,
                                      attribute: .topMargin,
                                      multiplier: 1,
-                                     constant: 0)
+                                     constant: 16)
         let bottom = NSLayoutConstraint(item: self,
                                         attribute: .bottomMargin,
                                         relatedBy: .equal,
                                         toItem: authorLabel,
                                         attribute: .bottomMargin,
                                         multiplier: 1,
-                                        constant: 0)
+                                        constant: 16)
 
         addConstraints([leading, trailing, top, bottom])
     }
