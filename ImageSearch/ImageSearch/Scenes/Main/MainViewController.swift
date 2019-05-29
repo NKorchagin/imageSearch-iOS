@@ -113,9 +113,11 @@ extension MainViewContoller {
     override func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: MainViewImageCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.imageView.addActivityIndicator()
         imageLoadingService.loadImage(from: images[indexPath.row].url) { [weak cell, weak self] (url, image) in
             guard let `self` = self else { return }
             guard let cell = cell else { return }
+            cell.imageView.removeActivityIndicator()
             guard url.absoluteString == self.images[indexPath.row].url.absoluteString else { return }
             cell.imageView.setImage(for: image)
         }
