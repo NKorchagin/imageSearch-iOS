@@ -71,6 +71,8 @@ private extension MainViewContoller {
 
     func configureCollectionView() {
         collectionView.register(cellClass: MainViewImageCell.self)
+
+        collectionView.keyboardDismissMode = .interactive
     }
 
     func searchImages(for text: String) {
@@ -130,7 +132,14 @@ extension MainViewContoller: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return CGSize(width: 50, height: 50)
+        let width = collectionView.safeSize.width / 2
+
+        if let imageSize = images[indexPath.row].imageSize {
+            let height = width / imageSize.width * imageSize.height
+            return CGSize(width: width, height: height)
+        } else {
+            return CGSize(width: width, height: width)
+        }
     }
 
 }
@@ -144,6 +153,27 @@ extension MainViewContoller: UISearchBarDelegate {
         images = []
         guard !searchText.isEmpty else { return }
         searchImages(for: searchText)
+    }
+
+}
+
+// MARK: -
+
+private extension UICollectionView {
+
+    var safeSize: CGSize {
+        let collectionViewFlowLayout = collectionViewLayout as? UICollectionViewFlowLayout
+        let sectionInset = collectionViewFlowLayout?.sectionInset ?? .zero
+
+        let width = bounds.size.width
+            - contentInset.left - contentInset.right
+            - sectionInset.left - sectionInset.right
+            - (collectionViewFlowLayout?.minimumInteritemSpacing ?? 0)
+        let height = bounds.size.height
+            - contentInset.top - contentInset.bottom
+            - sectionInset.top - sectionInset.bottom
+
+        return CGSize(width: width, height: height)
     }
 
 }
