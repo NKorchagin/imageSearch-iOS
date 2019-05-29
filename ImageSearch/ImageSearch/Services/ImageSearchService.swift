@@ -38,6 +38,8 @@ extension ImageSearchService: ImageSearchServiceType {
                 #endif
 
                 if let taskError = taskError, !taskError.isCancellationError {
+                    //Why assertion failure instead of error handling? It will just crash on any error like bad connection,
+                    // so you should handle it properly, either return empty images for any failed provider or return arror for all
                     assertionFailure(taskError.localizedDescription)
                     dispatchGroup.leave()
                     return

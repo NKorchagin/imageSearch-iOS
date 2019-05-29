@@ -55,7 +55,12 @@ private extension ImageDetailViewController {
     @objc func shareButtonTouchedUp(sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Share", message: nil, preferredStyle: .actionSheet)
 
+        /*There is no any sence to create closure in scope if you are not going to reuse it.
+         It would be much cleaner code if you add this block as trailing param for
+         UIAlertAction(...) { code } And no need of extra typealias
+         */
         let facebookActionHandler: AlertActionHandler = { [weak self] _ in
+            // You can use self without ` ` it's fixed in recent Swift versions
             guard let `self` = self else { return }
             self.imageLoadingService.loadImage(from: self.image.url, completion: { url, image in
                 guard
@@ -130,6 +135,7 @@ extension ImageDetailViewController {
             imageLoadingService.loadImage(from: image.url) { [weak cell, weak self] url, image in
                 guard let `self` = self else { return }
                 guard let cell = cell else { return }
+                //I would rather add dispatch main thread here than inside 3 different remoteImageView methods
                 cell.remoteImageView.removeActivityIndicator()
                 guard url.absoluteString == self.image.url.absoluteString else { return }
                 cell.remoteImageView.setImage(for: image)

@@ -43,9 +43,11 @@ extension ImageSearchProvider: ImageSearchProviderType {
         var parameters = queryParameters(with: searchRequest)
         parameters["q"] = searchRequest
 
+        //You can use URLQueryItem instead
         let query = parameters
             .reduce("", { $0 + $1.key + "=" + $1.value + "&" })
             .dropLast()
+        //And queryItems array here instead of raw query string, much safier
         urlComponents.query = String(query)
 
         return urlComponents.url
@@ -104,6 +106,10 @@ extension GoogleImagesResponse: RemoteImageConvertableResponse {
         return items
             .compactMap {
                 guard let url = URL(string: $0.link) else { return nil }
+
+                /*
+                 This is the only place where you initialize RemoteImage, which is already parsed by Decodable. If you add this type for reusing with other services it should be protocol like `RemoteImageProtocol` and Google service Item will conform to this protocol, so here it would be like
+                 */
                 return RemoteImage(url: url,
                                    author: $0.displayLink,
                                    imageWidth: $0.image?.width,

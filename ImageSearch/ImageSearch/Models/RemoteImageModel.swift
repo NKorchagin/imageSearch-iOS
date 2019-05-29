@@ -8,6 +8,7 @@ struct RemoteImage {
     let author: String?
     let tags: [String]
 
+    //Why variables?
     private var imageWidth: Int?
     private var imageHeight: Int?
 
@@ -28,6 +29,7 @@ struct RemoteImage {
 extension RemoteImage {
 
     var imageSize: CGSize? {
+        // Coulde be inside single guard statement, cause in both cases return is the same
         guard let imageWidth = imageWidth else { return nil }
         guard let imageHeight = imageHeight else { return nil }
         return CGSize(width: imageWidth, height: imageHeight)

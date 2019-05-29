@@ -10,6 +10,14 @@ extension UIImageView {
             indicator.hidesWhenStopped = true
             indicator.translatesAutoresizingMaskIntoConstraints = false
 
+            /*
+             Could be done much easier
+             NSLayoutConstraint.activate([
+             indicator.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+             indicator.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+             ])
+             */
+
             let centerX = NSLayoutConstraint(item: indicator,
                                              attribute: .centerX,
                                              relatedBy: .equal,
@@ -25,6 +33,7 @@ extension UIImageView {
                                              multiplier: 1,
                                              constant: 0)
 
+            //Why only this part dispatched? 7 line with start animating should also be done in Main Thread
             DispatchQueue.main.async {
                 self.addSubview(indicator)
                 self.addConstraints([centerX, centerY])

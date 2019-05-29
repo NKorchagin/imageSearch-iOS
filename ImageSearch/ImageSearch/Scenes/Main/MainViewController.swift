@@ -78,6 +78,8 @@ private extension MainViewContoller {
     func searchImages(for text: String) {
         collectionView.backgroundView = UIActivityIndicatorView(style: .whiteLarge)
 
+        //If tou think this should be done asyncronously in background queue it shoudn't be in ViewController
+        //And result block should be dispatched ti main queue outside of ViewController
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             guard let `self` = self else { return }
             self.imageSearchService.searchImages(for: text, with: self.userSettingsService.imageSearchProviders) { result in
@@ -85,6 +87,7 @@ private extension MainViewContoller {
                     switch result {
                     case .success(let images):
                         self.collectionView.backgroundView = nil
+                        // I don't see benefits of appending new images to current result, this will not work with current logic anyway
                         self.images += images
                     case .failure(let error):
                         print(error.localizedDescription)
@@ -118,6 +121,7 @@ extension MainViewContoller {
             guard let `self` = self else { return }
             guard let cell = cell else { return }
             cell.imageView.removeActivityIndicator()
+            // It will crash, images array size can change during image load
             guard url.absoluteString == self.images[indexPath.row].url.absoluteString else { return }
             cell.imageView.setImage(for: image)
         }
