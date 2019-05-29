@@ -25,6 +25,10 @@
 		C71A9724229E226B00F85DB3 /* UIImageView+ImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9723229E226B00F85DB3 /* UIImageView+ImageLoading.swift */; };
 		C71A9727229E252400F85DB3 /* UserSettingsServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9725229E252400F85DB3 /* UserSettingsServiceType.swift */; };
 		C71A9728229E252400F85DB3 /* UserSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9726229E252400F85DB3 /* UserSettingsService.swift */; };
+		C76D52C8229E2F8600DBC731 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D52C7229E2F8600DBC731 /* ImageDetailViewController.swift */; };
+		C76D52CB229E335800DBC731 /* UITableView+DequeueAndRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D52CA229E335800DBC731 /* UITableView+DequeueAndRegister.swift */; };
+		C76D52CD229E347500DBC731 /* ImageDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D52CC229E347500DBC731 /* ImageDetailCell.swift */; };
+		C76D52CF229E352600DBC731 /* ImageDetailAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D52CE229E352600DBC731 /* ImageDetailAuthor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		C71A9723229E226B00F85DB3 /* UIImageView+ImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoading.swift"; sourceTree = "<group>"; };
 		C71A9725229E252400F85DB3 /* UserSettingsServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsServiceType.swift; sourceTree = "<group>"; };
 		C71A9726229E252400F85DB3 /* UserSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsService.swift; sourceTree = "<group>"; };
+		C76D52C7229E2F8600DBC731 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		C76D52CA229E335800DBC731 /* UITableView+DequeueAndRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DequeueAndRegister.swift"; sourceTree = "<group>"; };
+		C76D52CC229E347500DBC731 /* ImageDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailCell.swift; sourceTree = "<group>"; };
+		C76D52CE229E352600DBC731 /* ImageDetailAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailAuthor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +177,7 @@
 		C71A9706229DCC4C00F85DB3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C76D52C6229E2F6300DBC731 /* ImageDetail */,
 				C71A9707229DCC5700F85DB3 /* Main */,
 			);
 			path = Scenes;
@@ -205,6 +214,7 @@
 			children = (
 				C71A9714229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift */,
 				C71A9723229E226B00F85DB3 /* UIImageView+ImageLoading.swift */,
+				C76D52CA229E335800DBC731 /* UITableView+DequeueAndRegister.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -220,6 +230,24 @@
 				C71A9725229E252400F85DB3 /* UserSettingsServiceType.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		C76D52C6229E2F6300DBC731 /* ImageDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C76D52C9229E30A700DBC731 /* -Views */,
+				C76D52C7229E2F8600DBC731 /* ImageDetailViewController.swift */,
+			);
+			path = ImageDetail;
+			sourceTree = "<group>";
+		};
+		C76D52C9229E30A700DBC731 /* -Views */ = {
+			isa = PBXGroup;
+			children = (
+				C76D52CC229E347500DBC731 /* ImageDetailCell.swift */,
+				C76D52CE229E352600DBC731 /* ImageDetailAuthor.swift */,
+			);
+			path = "-Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,12 +381,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C71A96D7229DC86B00F85DB3 /* AppDelegate.swift in Sources */,
+				C76D52CB229E335800DBC731 /* UITableView+DequeueAndRegister.swift in Sources */,
 				C71A9724229E226B00F85DB3 /* UIImageView+ImageLoading.swift in Sources */,
 				C71A971F229E063500F85DB3 /* ImageLoadingServiceType.swift in Sources */,
 				C71A9710229DD22B00F85DB3 /* MainViewImageCell.swift in Sources */,
+				C76D52CF229E352600DBC731 /* ImageDetailAuthor.swift in Sources */,
 				C71A971A229DD8B000F85DB3 /* ImageSearchService.swift in Sources */,
+				C76D52C8229E2F8600DBC731 /* ImageDetailViewController.swift in Sources */,
 				C71A9715229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift in Sources */,
 				C71A970D229DD09400F85DB3 /* RemoteImageModel.swift in Sources */,
+				C76D52CD229E347500DBC731 /* ImageDetailCell.swift in Sources */,
 				C71A9728229E252400F85DB3 /* UserSettingsService.swift in Sources */,
 				C71A9727229E252400F85DB3 /* UserSettingsServiceType.swift in Sources */,
 				C71A9720229E063500F85DB3 /* ImageLoadingService.swift in Sources */,

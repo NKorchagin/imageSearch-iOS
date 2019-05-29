@@ -114,7 +114,7 @@ extension MainViewContoller {
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: MainViewImageCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.imageView.addActivityIndicator()
-        imageLoadingService.loadImage(from: images[indexPath.row].url) { [weak cell, weak self] (url, image) in
+        imageLoadingService.loadImage(from: images[indexPath.row].url) { [weak cell, weak self] url, image in
             guard let `self` = self else { return }
             guard let cell = cell else { return }
             cell.imageView.removeActivityIndicator()
@@ -122,6 +122,17 @@ extension MainViewContoller {
             cell.imageView.setImage(for: image)
         }
         return cell
+    }
+
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension MainViewContoller {
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailController = ImageDetailViewController(image: images[indexPath.row], imageLoadingService: imageLoadingService)
+        navigationController?.pushViewController(detailController, animated: true)
     }
 
 }
