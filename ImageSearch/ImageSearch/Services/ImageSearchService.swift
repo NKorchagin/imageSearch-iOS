@@ -2,10 +2,6 @@ import Foundation
 
 class ImageSearchService {
 
-    // MARK: - Typealiases
-
-    private typealias DataTaskCompletion = (Data?, URLResponse?, Error?) -> Void
-
     // MARK: - Properties
 
     private var tasks: [URLSessionTask] = []

@@ -4,7 +4,7 @@ class MainViewImageCell: UICollectionViewCell {
 
     // MARK: - Properties
 
-    private let imageView = UIImageView()
+    let imageView = UIImageView()
 
     // MARK: - Initialization and Deinitialization
 

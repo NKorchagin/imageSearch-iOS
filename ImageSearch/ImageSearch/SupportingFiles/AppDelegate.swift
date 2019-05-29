@@ -22,7 +22,9 @@ extension AppDelegate: UIApplicationDelegate {
         window.makeKeyAndVisible()
 
         let imageSearchService = ImageSearchService()
-        let mainViewContoller = MainViewContoller(imageSearchService: imageSearchService)
+        let imageLoadingService = ImageLoadingService()
+        let mainViewContoller = MainViewContoller(imageSearchService: imageSearchService,
+                                                  imageLoadingService: imageLoadingService)
 
         let mainNavigationController = UINavigationController(rootViewController: mainViewContoller)
         mainNavigationController.navigationBar.prefersLargeTitles = true

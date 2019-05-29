@@ -19,6 +19,10 @@
 		C71A9719229DD8B000F85DB3 /* ImageSearchServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9717229DD8B000F85DB3 /* ImageSearchServiceType.swift */; };
 		C71A971A229DD8B000F85DB3 /* ImageSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9718229DD8B000F85DB3 /* ImageSearchService.swift */; };
 		C71A971C229DE82100F85DB3 /* ImageSearchProviderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A971B229DE82100F85DB3 /* ImageSearchProviderModel.swift */; };
+		C71A971F229E063500F85DB3 /* ImageLoadingServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A971D229E063400F85DB3 /* ImageLoadingServiceType.swift */; };
+		C71A9720229E063500F85DB3 /* ImageLoadingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A971E229E063400F85DB3 /* ImageLoadingService.swift */; };
+		C71A9722229E0B8200F85DB3 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9721229E0B8200F85DB3 /* Typealiases.swift */; };
+		C71A9724229E226B00F85DB3 /* UIImageView+ImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9723229E226B00F85DB3 /* UIImageView+ImageLoading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		C71A9717229DD8B000F85DB3 /* ImageSearchServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchServiceType.swift; sourceTree = "<group>"; };
 		C71A9718229DD8B000F85DB3 /* ImageSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchService.swift; sourceTree = "<group>"; };
 		C71A971B229DE82100F85DB3 /* ImageSearchProviderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchProviderModel.swift; sourceTree = "<group>"; };
+		C71A971D229E063400F85DB3 /* ImageLoadingServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingServiceType.swift; sourceTree = "<group>"; };
+		C71A971E229E063400F85DB3 /* ImageLoadingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingService.swift; sourceTree = "<group>"; };
+		C71A9721229E0B8200F85DB3 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		C71A9723229E226B00F85DB3 /* UIImageView+ImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoading.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +146,9 @@
 		C71A9704229DCA8500F85DB3 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				C71A96D6229DC86B00F85DB3 /* AppDelegate.swift */,
 				C71A96E2229DC87000F85DB3 /* Info.plist */,
+				C71A96D6229DC86B00F85DB3 /* AppDelegate.swift */,
+				C71A9721229E0B8200F85DB3 /* Typealiases.swift */,
 				C71A96DF229DC87000F85DB3 /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
@@ -191,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				C71A9714229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift */,
+				C71A9723229E226B00F85DB3 /* UIImageView+ImageLoading.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -198,6 +208,8 @@
 		C71A9716229DD87900F85DB3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C71A971E229E063400F85DB3 /* ImageLoadingService.swift */,
+				C71A971D229E063400F85DB3 /* ImageLoadingServiceType.swift */,
 				C71A9718229DD8B000F85DB3 /* ImageSearchService.swift */,
 				C71A9717229DD8B000F85DB3 /* ImageSearchServiceType.swift */,
 			);
@@ -335,10 +347,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C71A96D7229DC86B00F85DB3 /* AppDelegate.swift in Sources */,
+				C71A9724229E226B00F85DB3 /* UIImageView+ImageLoading.swift in Sources */,
+				C71A971F229E063500F85DB3 /* ImageLoadingServiceType.swift in Sources */,
 				C71A9710229DD22B00F85DB3 /* MainViewImageCell.swift in Sources */,
 				C71A971A229DD8B000F85DB3 /* ImageSearchService.swift in Sources */,
 				C71A9715229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift in Sources */,
 				C71A970D229DD09400F85DB3 /* RemoteImageModel.swift in Sources */,
+				C71A9720229E063500F85DB3 /* ImageLoadingService.swift in Sources */,
+				C71A9722229E0B8200F85DB3 /* Typealiases.swift in Sources */,
 				C71A970A229DCCCA00F85DB3 /* MainViewController.swift in Sources */,
 				C71A971C229DE82100F85DB3 /* ImageSearchProviderModel.swift in Sources */,
 				C71A9719229DD8B000F85DB3 /* ImageSearchServiceType.swift in Sources */,

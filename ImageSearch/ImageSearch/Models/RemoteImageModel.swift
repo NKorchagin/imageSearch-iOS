@@ -5,7 +5,6 @@ struct RemoteImage {
     // MARK: - Properties
 
     let url: URL
-    var image: UIImage?
     let author: String?
     let tags: [String]
 
@@ -16,7 +15,6 @@ struct RemoteImage {
 
     init(url: URL, author: String?, imageWidth: Int?, imageHeight: Int?) {
         self.url = url
-        self.image = nil
         self.author = author
         self.tags = []
         self.imageWidth = imageWidth
