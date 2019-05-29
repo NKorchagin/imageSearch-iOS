@@ -21,12 +21,13 @@ extension AppDelegate: UIApplicationDelegate {
         self.window = window
         window.makeKeyAndVisible()
 
-        let mainViewContoller = MainViewContoller()
+        let imageSearchService = ImageSearchService()
+        let mainViewContoller = MainViewContoller(imageSearchService: imageSearchService)
+
         let mainNavigationController = UINavigationController(rootViewController: mainViewContoller)
         mainNavigationController.navigationBar.prefersLargeTitles = true
+
         window.rootViewController = mainNavigationController
-
-
 
         return true
     }

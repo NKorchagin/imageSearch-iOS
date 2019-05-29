@@ -16,6 +16,9 @@
 		C71A970D229DD09400F85DB3 /* RemoteImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A970C229DD09300F85DB3 /* RemoteImageModel.swift */; };
 		C71A9710229DD22B00F85DB3 /* MainViewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A970F229DD22B00F85DB3 /* MainViewImageCell.swift */; };
 		C71A9715229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9714229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift */; };
+		C71A9719229DD8B000F85DB3 /* ImageSearchServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9717229DD8B000F85DB3 /* ImageSearchServiceType.swift */; };
+		C71A971A229DD8B000F85DB3 /* ImageSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A9718229DD8B000F85DB3 /* ImageSearchService.swift */; };
+		C71A971C229DE82100F85DB3 /* ImageSearchProviderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A971B229DE82100F85DB3 /* ImageSearchProviderModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		C71A970C229DD09300F85DB3 /* RemoteImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageModel.swift; sourceTree = "<group>"; };
 		C71A970F229DD22B00F85DB3 /* MainViewImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewImageCell.swift; sourceTree = "<group>"; };
 		C71A9714229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DequeueAndRegister.swift"; sourceTree = "<group>"; };
+		C71A9717229DD8B000F85DB3 /* ImageSearchServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchServiceType.swift; sourceTree = "<group>"; };
+		C71A9718229DD8B000F85DB3 /* ImageSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchService.swift; sourceTree = "<group>"; };
+		C71A971B229DE82100F85DB3 /* ImageSearchProviderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchProviderModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 				C71A9713229DD55B00F85DB3 /* Extensions */,
 				C71A970B229DD07300F85DB3 /* Models */,
 				C71A9706229DCC4C00F85DB3 /* Scenes */,
+				C71A9716229DD87900F85DB3 /* Services */,
 				C71A9704229DCA8500F85DB3 /* SupportingFiles */,
 			);
 			path = ImageSearch;
@@ -166,6 +173,7 @@
 		C71A970B229DD07300F85DB3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C71A971B229DE82100F85DB3 /* ImageSearchProviderModel.swift */,
 				C71A970C229DD09300F85DB3 /* RemoteImageModel.swift */,
 			);
 			path = Models;
@@ -185,6 +193,15 @@
 				C71A9714229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C71A9716229DD87900F85DB3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C71A9718229DD8B000F85DB3 /* ImageSearchService.swift */,
+				C71A9717229DD8B000F85DB3 /* ImageSearchServiceType.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,9 +336,12 @@
 			files = (
 				C71A96D7229DC86B00F85DB3 /* AppDelegate.swift in Sources */,
 				C71A9710229DD22B00F85DB3 /* MainViewImageCell.swift in Sources */,
+				C71A971A229DD8B000F85DB3 /* ImageSearchService.swift in Sources */,
 				C71A9715229DD58D00F85DB3 /* UICollectionView+DequeueAndRegister.swift in Sources */,
 				C71A970D229DD09400F85DB3 /* RemoteImageModel.swift in Sources */,
 				C71A970A229DCCCA00F85DB3 /* MainViewController.swift in Sources */,
+				C71A971C229DE82100F85DB3 /* ImageSearchProviderModel.swift in Sources */,
+				C71A9719229DD8B000F85DB3 /* ImageSearchServiceType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
