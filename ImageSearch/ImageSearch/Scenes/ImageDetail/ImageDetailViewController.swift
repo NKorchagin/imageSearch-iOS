@@ -1,3 +1,4 @@
+import Social
 import UIKit
 
 class ImageDetailViewController: UITableViewController {
@@ -28,6 +29,7 @@ class ImageDetailViewController: UITableViewController {
         view.backgroundColor = .white
 
         configureTableView()
+        configureShareButton()
     }
 
 }
@@ -42,6 +44,57 @@ private extension ImageDetailViewController {
 
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
+    }
+
+    func configureShareButton() {
+        let image = UIImage(named: "Share")
+        let item = UIBarButtonItem(image: image, style: .done, target: self, action: #selector(shareButtonTouchedUp(sender:)))
+        navigationItem.rightBarButtonItem = item
+    }
+
+    @objc func shareButtonTouchedUp(sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Share", message: nil, preferredStyle: .actionSheet)
+
+        let facebookActionHandler: AlertActionHandler = { [weak self] _ in
+            guard let `self` = self else { return }
+            self.imageLoadingService.loadImage(from: self.image.url, completion: { url, image in
+                guard
+                    let image = image,
+                    let shareController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+                else {
+                    self.presentErrorAlert()
+                    return
+                }
+
+                shareController.add(image)
+                shareController.add(url)
+                self.present(shareController, animated: true)
+            })
+        }
+
+        let facebookAction = UIAlertAction(title: "Facebook", style: .default, handler: facebookActionHandler)
+        alert.addAction(facebookAction)
+
+        let moreActionHandler: AlertActionHandler = { [weak self] _ in
+            guard let `self` = self else { return }
+            self.imageLoadingService.loadImage(from: self.image.url, completion: { url, image in
+                guard let image = image else {
+                    self.presentErrorAlert()
+                    return
+                }
+
+                let controller = UIActivityViewController(activityItems: [url, image], applicationActivities: nil)
+                self.present(controller, animated: true)
+            })
+        }
+
+        let moreAction = UIAlertAction(title: "More", style: .default, handler: moreActionHandler)
+        alert.addAction(moreAction)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(cancelAction)
+
+        present(alert, animated: true)
     }
 
 }
@@ -115,6 +168,18 @@ private extension ImageDetailViewController {
     enum SectionIndex: Int {
         case image
         case author
+    }
+
+}
+
+// MARK: -
+
+extension UIViewController {
+
+    func presentErrorAlert() {
+        let alert = UIAlertController(title: "Ooops", message: "Something went wrong. Please, try again later", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        present(alert, animated: true)
     }
 
 }
