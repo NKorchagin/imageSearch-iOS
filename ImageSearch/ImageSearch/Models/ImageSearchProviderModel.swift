@@ -1,6 +1,6 @@
 import Foundation
 
-enum ImageSearchProvider {
+enum ImageSearchProvider: String, CaseIterable {
 
     case googleImages
 
@@ -34,6 +34,8 @@ private extension ImageSearchProvider {
 // MARK: - ImageSearchProviderType
 
 extension ImageSearchProvider: ImageSearchProviderType {
+
+    var name: String { return rawValue }
 
     func url(with searchRequest: String) -> URL? {
         guard var urlComponents = URLComponents(string: basePath) else { return nil }

@@ -6,6 +6,7 @@ class MainViewContoller: UICollectionViewController {
 
     private let imageSearchService: ImageSearchServiceType
     private let imageLoadingService: ImageLoadingServiceType
+    private let userSettingsService: UserSettingsServiceType
 
     private let searchController = UISearchController(searchResultsController: nil)
 
@@ -17,9 +18,13 @@ class MainViewContoller: UICollectionViewController {
 
     // MARK: - Initialization and Deinitialization
 
-    init(imageSearchService: ImageSearchServiceType, imageLoadingService: ImageLoadingServiceType) {
+    init(imageSearchService: ImageSearchServiceType,
+         imageLoadingService: ImageLoadingServiceType,
+         userSettingsService: UserSettingsServiceType) {
+
         self.imageSearchService = imageSearchService
         self.imageLoadingService = imageLoadingService
+        self.userSettingsService = userSettingsService
 
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.minimumInteritemSpacing = 16
@@ -73,7 +78,7 @@ private extension MainViewContoller {
 
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             guard let `self` = self else { return }
-            self.imageSearchService.searchImages(for: text, with: [ImageSearchProvider.googleImages]) { result in
+            self.imageSearchService.searchImages(for: text, with: self.userSettingsService.imageSearchProviders) { result in
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let images):

@@ -23,8 +23,10 @@ extension AppDelegate: UIApplicationDelegate {
 
         let imageSearchService = ImageSearchService()
         let imageLoadingService = ImageLoadingService()
+        let userSettingsService = UserSettingsService()
         let mainViewContoller = MainViewContoller(imageSearchService: imageSearchService,
-                                                  imageLoadingService: imageLoadingService)
+                                                  imageLoadingService: imageLoadingService,
+                                                  userSettingsService: userSettingsService)
 
         let mainNavigationController = UINavigationController(rootViewController: mainViewContoller)
         mainNavigationController.navigationBar.prefersLargeTitles = true

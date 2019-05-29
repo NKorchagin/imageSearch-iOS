@@ -14,6 +14,8 @@ protocol ImageSearchServiceType {
 
 protocol ImageSearchProviderType {
 
+    var name: String { get }
+
     func url(with searchRequest: String) -> URL?
     func decode(responseData: Data) throws -> [RemoteImage]
 
